@@ -26,8 +26,8 @@ public class Main implements CommandLineRunner {
 
 		animalRepository.save(someAnimal);
 
-		List<Animal> users2 = animalRepository.findAll();
-		users2.forEach(System.out::println);
+		List<Animal> animals2 = animalRepository.findAll();
+		animals2.forEach(System.out::println);
 	}
 
 	private Animal getAnimal() {
