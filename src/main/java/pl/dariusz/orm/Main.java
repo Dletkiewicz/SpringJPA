@@ -28,9 +28,20 @@ public class Main implements CommandLineRunner {
 
 		List<Animal> animals2 = animalRepository.findAll();
 		animals2.forEach(System.out::println);
+
+		List<Animal> foundAnimals = animalRepository.findByAge(8);
+		foundAnimals.forEach(System.out::println);
+
+		List<Animal> foundAnimals2 = animalRepository.findByName("Kłapouchy");
+		foundAnimals.forEach(System.out::println);
+
+		List<Animal> foundAnimals3 = animalRepository.findBySpecies("Lion");
+		foundAnimals.forEach(System.out::println);
+
+
 	}
 
 	private Animal getAnimal() {
-		return new Animal("Puszek", 8, "Lion");
+		return new Animal("Kłapouchy", 3, "donkey");
 	}
 }
